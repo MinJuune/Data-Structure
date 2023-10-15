@@ -20,8 +20,7 @@ int main(int argc, char* argv[]) {
 	char line[MAXLEN];          // 80
 
 	ifstream is(argv[1]);
-
-	cout << "학번 이름 : B911028 김민준" << endl;
+	
 	while (getdata(is, line, MAXLEN)) {
 		Expression e(line);                 // line 버퍼를 이용하여 Expression을 읽음
 
