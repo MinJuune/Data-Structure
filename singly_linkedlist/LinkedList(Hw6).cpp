@@ -33,7 +33,6 @@ int main(int argc, char* argv[]) {
 	}
 	
 
-	//push_front와 push_back은 2회씩
 	cout << "=======Push_Front============" << endl;
 	is >> input;
 	il.Push_Front(input);
