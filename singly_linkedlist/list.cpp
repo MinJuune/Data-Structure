@@ -34,8 +34,6 @@ void intList::Push_Front(int e) {
 }
 
 void intList::Insert(int e) {
-	//자유롭게 작성
-	//Node 포인터 하나만으로도 리스트 순회 가능
 	Node* newdata = new Node;
 	Node* temp = new Node;
 	temp = first;
@@ -68,12 +66,8 @@ void intList::Insert(int e) {
 		}
 	}
 }
-// 여기 정렬부분 잘 안되고 있음 좀있다 잘 생각해보기
-
 
 void intList::Delete(int e) {
-	//자유롭게 작성
-	//Node 포인터 하나만으로도 리스트 순회 가능
 	if (first) {
 		Node* temp = new Node;
 		temp = first;
@@ -113,4 +107,3 @@ void intList::Delete(int e) {
 		cout << "empty list" << endl;
 	}
 }
-// delete 잘 작성한거 같은데 뭐가 빠졌나? 잘 모르겠네
