@@ -1,0 +1,5 @@
+링크드 리스트에서
+1 5 4 4 3 2 하나씩 insert
+1 3 2 2 5 해당하는 값 하나씩 delete
+1 2 push_Front
+3 4 push_Back
