@@ -3,6 +3,6 @@
 preorder traversal(재귀)
 Inorder traversal(재귀)
 postorder traversal(재귀)
-levelorder traversal(큐)
+Levelorder traversal(큐)
 stack preorder traversal
 stack postorder traversal
