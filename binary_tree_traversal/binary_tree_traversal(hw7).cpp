@@ -1,17 +1,17 @@
 #include "bt.h"
 #include <iostream>
-#include <fstream> //**
+#include <fstream> 
 using namespace std;
 
-int main(int argc, char* argv[]) {  //**
+int main(int argc, char* argv[]) {  
 	Tree<double> tree;
 	double dval;
 
-	ifstream is(argv[1]);  //**
+	ifstream is(argv[1]);  
 
 	cout << "Enter doubles:\n";
 
-	while (is >> dval) {    //**
+	while (is >> dval) {    
 		tree.Insert(dval);
 	}
 	
