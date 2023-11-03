@@ -1,0 +1,8 @@
+우선 루트 먼저 입력 받고 나머지는 값의 크기에 따라 트리로 입력 받음
+트리 순회 
+preorder traversal(재귀)
+Inorder traversal(재귀)
+postorder traversal(재귀)
+levelorder traversal
+stack preorder traversal
+stack postorder traversal
