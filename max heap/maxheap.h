@@ -55,29 +55,24 @@ void Maxheap<T>::Push(const T& e) {
 
 template <class T>
 void Maxheap<T>::Pop() {
-	//최대 원소를 삭제한다. 
 	if (IsEmpty()) {
 		throw "Heap is empty. Cannot delete";
 	}
-	heap[1].~T(); //최대 원소 삭제
 	
-	//히프의 마지막 원소 제거
 	T lastE = heap[heapSize--];
 
-	int currentNode = 1; //루프
-	int child = 2;       // currentNode의 자식
+	int currentNode = 1; 
+	int child = 2;      
 	while (child <= heapSize) {
-		//child를 currentNode의 큰자식으로 결정
 		if (child < heapSize && heap[child] < heap[child + 1]) {
 			child++;
 		}
 
-		//currentNode에 lastE를 삽입할수 있는가?
 		if (lastE >= heap[child]) {
 			break;
 		}
 
-		//no
+
 		heap[currentNode] = heap[child];
 		currentNode = child;
 		child *= 2;
