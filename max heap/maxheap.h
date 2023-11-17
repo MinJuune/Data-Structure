@@ -3,11 +3,6 @@
 #include <iostream>
 using namespace std;
 
-//¾Æ·¡ 3 ÇÔ¼ö ¿Ï¼ºÇÏ±â
-//void ChangeSize1D(int);
-//void Push(const T &);
-//void Pop();
-
 
 template <class T>
 class Maxheap {
@@ -60,24 +55,24 @@ void Maxheap<T>::Push(const T& e) {
 
 template <class T>
 void Maxheap<T>::Pop() {
-	//ÃÖ´ë ¿ø¼Ò¸¦ »èÁ¦ÇÑ´Ù. 
+	//ìµœëŒ€ ì›ì†Œë¥¼ ì‚­ì œí•œë‹¤. 
 	if (IsEmpty()) {
 		throw "Heap is empty. Cannot delete";
 	}
-	heap[1].~T(); //ÃÖ´ë ¿ø¼Ò »èÁ¦
+	heap[1].~T(); //ìµœëŒ€ ì›ì†Œ ì‚­ì œ
 	
-	//È÷ÇÁÀÇ ¸¶Áö¸· ¿ø¼Ò Á¦°Å
+	//íˆí”„ì˜ ë§ˆì§€ë§‰ ì›ì†Œ ì œê±°
 	T lastE = heap[heapSize--];
 
-	int currentNode = 1; //·çÇÁ
-	int child = 2;       // currentNodeÀÇ ÀÚ½Ä
+	int currentNode = 1; //ë£¨í”„
+	int child = 2;       // currentNodeì˜ ìì‹
 	while (child <= heapSize) {
-		//child¸¦ currentNodeÀÇ Å«ÀÚ½ÄÀ¸·Î °áÁ¤
+		//childë¥¼ currentNodeì˜ í°ìì‹ìœ¼ë¡œ ê²°ì •
 		if (child < heapSize && heap[child] < heap[child + 1]) {
 			child++;
 		}
 
-		//currentNode¿¡ lastE¸¦ »ğÀÔÇÒ¼ö ÀÖ´Â°¡?
+		//currentNodeì— lastEë¥¼ ì‚½ì…í• ìˆ˜ ìˆëŠ”ê°€?
 		if (lastE >= heap[child]) {
 			break;
 		}
